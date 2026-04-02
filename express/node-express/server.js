@@ -4,7 +4,8 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Servidor Express rodando 🚀');
+//   res.send('Servidor Express rodando 🚀');
+res.json({message: "Olá, Mundo!"});
 });
 
 app.listen(PORT, () => {
