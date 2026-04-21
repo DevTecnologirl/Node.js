@@ -1,0 +1,87 @@
+@baseURL = http://localhost:3000
+### 1. Testar a rota POST /usuarios (CREATE)
+POST {{baseURL}}/usuarios
+Content-Type: application/json
+    
+{
+      "nome": "Carlos",
+      "idade": 28
+}
+    
+### 2. Testar a rota GET /usuarios (READ)
+GET {{baseURL}}/usuarios
+Content-Type: application/json
+    
+### 3. Testar a rota PUT /usuarios/:id (UPDATE)
+PUT {{baseURL}}/usuarios/1
+Content-Type: application/json
+    
+{
+      "nome": "Carlos Silva",
+      "idade": 29
+}
+    
+### 4. Testar a rota DELETE /usuarios/:id (DELETE)
+DELETE {{baseURL}}/usuarios/1
+Content-Type: application/json
+    
+
+Após escrever cada requisição, um link “Send Request” aparecerá acima delas. Clique nesse link para enviar cada requisição. Neste contexto, ao testarmos a rota POST /usuarios (CREATE), teremos o seguinte resultado esperado:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 76
+ETag: W/"4c-/MxMg7NCK8JJjmDbDPe97I4sWo8"
+Date: Wed, 06 Nov 2024 14:14:50 GMT
+Connection: close
+    [
+      {
+        "id": 1,
+        "nome": "Carlos",
+        "idade": 28,
+        "criado_em": "2024-11-06T14:14:47.000Z"
+      }
+    ]
+    
+
+Em seguida, ao testarmos a rota GET /usuarios (READ), teremos o seguinte resultado:
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 76
+ETag: W/"4c-9Df3qKJsVqJ3cHrlgTMj8eeoP8A"
+Date: Wed, 06 Nov 2024 14:17:24 GMT
+Connection: close
+    [
+      {
+        "id": 2,
+        "nome": "Carlos",
+        "idade": 28,
+         "criado_em": "2024-11-06T14:14:47.000Z"
+      }
+    ]
+    
+
+Depois, ao testarmos a rota PUT /usuarios/:id (UPDATE), teremos o seguinte resultado:
+HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 31
+    ETag: W/"1f-GBKzCSPiDDgr9Gmo65ZulHGnxoA"
+    Date: Wed, 06 Nov 2024 14:19:32 GMT
+    Connection: close
+    
+    Usuário atualizado com sucesso
+    
+
+E, finalmente, ao testarmos a rota DELETE /usuarios/:id (DELETE), teremos o seguinte resultado:
+HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 29
+    ETag: W/"1d-lwh4WdutakrONQeiMcNZmfgEqzw"
+    Date: Wed, 06 Nov 2024 14:20:15 GMT
+    Connection: close
+    
+    Usuário deletado com sucesso
+    
