@@ -1,2 +1,9 @@
 
 GET http://localhost:3000/
+
+GET http://localhost:3000/dashboard
+
+### Teste da rota GET /
+GET http://localhost:3000/
+### Teste da rota GET /sobre
+GET http://localhost:3000/sobre

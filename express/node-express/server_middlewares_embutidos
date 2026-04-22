@@ -1,0 +1,7 @@
+app.use(express.json()); // Processa JSON em requisições
+app.use(express.urlencoded({ extended: true })); // Processa dados de formulário
+app.post("/usuarios", (req, res) => {
+      const { nome, email } = req.body;
+      res.json({ message: `Usuário ${nome} com email ${email} criado!` }); 
+});
+    
