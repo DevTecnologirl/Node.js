@@ -4,8 +4,8 @@ POST {{baseURL}}/usuarios
 Content-Type: application/json
     
 {
-      "nome": "Carlos",
-      "idade": 28
+      "nome": "Camilly",
+      "idade": 22
 }
     
 ### 2. Testar a rota GET /usuarios (READ)
